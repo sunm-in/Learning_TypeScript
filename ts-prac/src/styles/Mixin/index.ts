@@ -1,4 +1,4 @@
-import { flexBox, borderBox } from './boxStyle';
+import { flexBox, floatBox, borderBox } from './boxStyle';
 import { textProps } from './textStyle';
 
-export { flexBox, borderBox, textProps };
+export { flexBox, floatBox, borderBox, textProps };

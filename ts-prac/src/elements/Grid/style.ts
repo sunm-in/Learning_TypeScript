@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { flexBox, borderBox, textProps } from '../../styles/Mixin';
+import { flexBox, floatBox, borderBox, textProps } from '../../styles/Mixin';
 
 export interface Prop {
   isFlex?: boolean;
@@ -34,7 +34,7 @@ export interface Prop {
 
 const makeItFlexBox = css<Prop>`
   ${({ hoz, ver, column }) => css`
-    ${flexBox((hoz = 'center'), (ver = 'center'))};
+    ${flexBox(hoz, ver)}
     ${column && `flex-direction: column`}
   `}
 `;
@@ -44,14 +44,14 @@ const GridStyle = styled.div<Prop>`
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   margin: ${({ margin }) => margin};
-  background-color: ${({ bgColor }) => bgColor};
+  background-color: ${({ bgColor, theme }) => theme.color[bgColor]};
   border-radius: ${({ radius }) => radius};
   overflow: ${({ overflow }) => overflow};
   cursor: ${({ cursor }) => cursor};
-  z-index: ${({ z }) => z};
-  ${({ padding }) => borderBox(padding!)};
-  ${({ fs, fw, color, lh, textAlign }) =>
-    textProps((fs = 'md'), (fw = 'regular'), (color = 'black'), (lh = '0'), textAlign!)};
+
+  ${({ padding }) => borderBox(padding)};
+  ${({ fs, fw, color, lh, textAlign }) => textProps(fs, fw, color, lh, textAlign)}
+  ${({ position, top, right, bottom, left, z }) => floatBox(position, top, right, bottom, left, z)};
   ${({ addstyle }) => addstyle}
 `;
 
