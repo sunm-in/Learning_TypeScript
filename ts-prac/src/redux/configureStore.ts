@@ -10,7 +10,9 @@ import { connectRouter } from 'connected-react-router';
 
 export const history = createBrowserHistory();
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  router: connectRouter(history),
+});
 
 const middlewares = [thunk.withExtraArgument({ history })];
 if (process.env.NODE_ENV === 'development') middlewares.push(logger);
