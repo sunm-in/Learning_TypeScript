@@ -22,10 +22,12 @@ const ContainerStyle = styled.div<Prop>`
   ${({ padding }) => borderBox(padding)};
   ${({ addstyle }) => addstyle};
   ${({ isFlex }) => isFlex && ColumnContainer};
+  background-color: ${({ theme }) => theme.color.yellow};
 
   @media (max-width: 800px) {
     max-width: none;
     width: 90%;
+    background-color: ${({ theme }) => theme.color.bgColor};
   }
 `;
 

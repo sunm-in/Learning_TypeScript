@@ -17,6 +17,7 @@ const fontWeight = {
 const color = {
   black: '#2C2C2C',
   white: '#FDFDFD',
+  yellow: '#fdcb6e',
   bgColor: '#74b9ff',
 };
 

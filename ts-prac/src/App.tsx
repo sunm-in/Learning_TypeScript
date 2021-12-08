@@ -1,12 +1,14 @@
 import React from 'react';
-
-// element
 import { Grid } from './elements';
+
+// componrnt
+import Header from './components/Header';
+import AddTodo from './components/AddTodoForm';
 
 function App() {
   return (
-    <Grid margin='5% auto'>
-      <h1>Hello World</h1>
+    <Grid textAlign='center'>
+      <Header />
     </Grid>
   );
 }
