@@ -7,9 +7,10 @@ import AddTodo from './components/AddTodoForm';
 
 function App() {
   return (
-    <Grid textAlign='center'>
+    <div style={{ width: '100%', height: '100vh' }}>
       <Header />
-    </Grid>
+      <AddTodo />
+    </div>
   );
 }
 

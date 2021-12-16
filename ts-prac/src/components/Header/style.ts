@@ -8,13 +8,14 @@ interface Prop {
 
 const HeaderStlye = styled.header<Prop>`
   width: 100%;
-  height: 50px;
+  height: 40px;
+  margin: auto;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9;
   background-color: ${({ theme }) => theme.color.black};
-  color: ${({ theme }) => theme.color.white};
+  color: ${({ theme }) => theme.color.yellow};
 `;
 
 export default HeaderStlye;

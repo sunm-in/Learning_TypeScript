@@ -18,6 +18,7 @@ export interface Prop {
   color?: string;
   disColor?: string;
   shadow?: string;
+  display?: string;
   addstyle?: any;
   theme: {
     [propName: string]: any;
@@ -39,6 +40,7 @@ const ButtonStyle = styled.button<Prop>`
   background-color: ${({ bgColor, theme }) => theme.color[bgColor]};
   cursor: pointer;
   border: ${({ border }) => border};
+  display: ${({ display }) => display};
   font-size: ${({ fs, theme }) => fs && theme.fontSize[fs]};
   font-weight: ${({ fw, theme }) => fw && theme.fontWeight[fw]};
   ${({ addstyle }) => addstyle};

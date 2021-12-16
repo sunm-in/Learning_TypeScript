@@ -16,6 +16,7 @@ const fontWeight = {
 
 const color = {
   black: '#2C2C2C',
+  gray: '#636e72',
   white: '#FDFDFD',
   yellow: '#fdcb6e',
   bgColor: '#74b9ff',
@@ -25,7 +26,7 @@ const size = {
   mobile: '600px',
   tablet: '900px',
   laptop: '1200px',
-  desktop: '1800px',
+  desktop: '1201px',
 };
 
 const deviceSize = {

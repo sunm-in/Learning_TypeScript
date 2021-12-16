@@ -18,6 +18,7 @@ export interface Props {
   color?: string;
   disColor?: string;
   shadow?: string;
+  display?: string;
   disabled?: any;
   addstyle?: any;
   arialabel?: string;
@@ -48,10 +49,12 @@ Button.defaultProps = {
   fw: 'bold',
   type: 'button',
   border: 'none',
-  radius: '14px',
+  radius: '8px',
   padding: '12px 0',
-  bgColor: 'bgColor',
+  bgColor: 'black',
+  color: 'yellow',
   disColor: 'white',
+  display: 'block',
   _onClick: () => {},
 };
 

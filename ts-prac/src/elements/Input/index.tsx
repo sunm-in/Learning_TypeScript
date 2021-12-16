@@ -4,6 +4,7 @@ import InputStyle from './style';
 export interface Props {
   width?: string;
   height?: string;
+  margin?: string;
   bgColor?: string;
   padding?: string;
   radius?: string;
